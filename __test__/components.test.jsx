@@ -1,7 +1,7 @@
 
 import {test, advanceTimersByTime} from '@jest/globals';
 
-import {ColoredButton, PowerToggleSwitch} from "../src/app/components.jsx";
+import {ColoredButton, PowerToggleSwitch, GameDisplay} from "../src/app/components.jsx";
 import Simon from "../src/app/page.js"
 
 import {render, screen} from "@testing-library/react";
@@ -31,14 +31,10 @@ test.each(['off', 'on'])(
     }
 );
 
-// test(
-//     'Verify that toggling the power button to "ON" displays a sign to indicate the game is on',
-//     async () => {
-//         const user = userEvent.setup({advanceTimers: advanceTimersByTime, delay: 500})
-//         render(<Simon />);
-//         const power_on_button = screen.getByRole("button", {name: "turn_game_on"});
-//         await user.click(power_on_button);
-//         const game_display_info = screen.getByText("- -");
-//         expect(game_display_info).toBeInTheDocument();
-//     }
-// );
+test("Verify that <GameDisplay /> displays a neutral sign to indicate the machine is on", () => {
+    const user = userEvent.setup();
+    render(<GameDisplay power="ON" level="- -" />);
+    const game_display_screen = screen.getByText("- -");
+    expect(game_display_screen).toBeVisible();
+});
+
