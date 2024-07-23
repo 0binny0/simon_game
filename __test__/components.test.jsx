@@ -1,11 +1,12 @@
 
-import {test, advanceTimersByTime} from '@jest/globals';
+import {test, advanceTimersByTime, beforeEach, jest} from '@jest/globals';
 
 import {ColoredButton, PowerToggleSwitch, GameDisplay} from "../src/app/components.jsx";
 import Simon from "../src/app/page.js"
 
-import {render, screen} from "@testing-library/react";
+import {render, screen, within, findByText} from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
+
 
 test.each([['red'], ['blue'], ['green'], ['yellow']])(
     'Verify that the %s button has an id and class to identify its color', (color) => {
