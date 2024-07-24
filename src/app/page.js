@@ -1,4 +1,4 @@
-
+"use client";
 import {useState} from "react";
 
 import {ColoredButton, GameDisplay, PowerToggleSwitch, NewGameButton} from "@/app/components.jsx";
