@@ -30,7 +30,7 @@ test(
             const new_game_button = screen.getByRole("button", {name: "start_new_game"});
             await user.click(new_game_button);
             await act(() => {
-                jest.advanceTimersByTime(2000);
+                jest.advanceTimersByTime(2400);
             });
             const display_screen_content = await screen.findByText("1");
             expect(display_screen_content).toBeVisible();

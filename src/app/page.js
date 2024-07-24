@@ -13,11 +13,13 @@ export default function Simon() {
         const status_signs = [" ", "- -", " ", "1"];
         let i = 0;
         const interval_id = setInterval(() => {
-            setLevel(status_signs[i++])
-        }, 500);
-        if (i === 3) {
-            clearInterval(interval_id);
-        }
+            setLevel(status_signs[i]);
+            if (i === 3) {
+                clearInterval(interval_id);
+            } else {
+                i++
+            }
+        }, 600);
     }
 
     const coloredPads = ['red', 'yellow', 'green', 'blue'].map(
