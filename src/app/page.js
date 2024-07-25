@@ -39,7 +39,7 @@ export default function Simon() {
                         <GameDisplay power={power} level={level} />
                         <NewGameButton start_game={handle_new_game_button_press}/>
                     </div>
-                    <PowerToggleSwitch power={power} setPower={setPower}/>
+                    <PowerToggleSwitch power={power} setPower={setPower} setLevel={setLevel}/>
                 </section>
             </main>
         </div>

@@ -3,14 +3,15 @@ function ColoredButton({color}) {
     return <button aria-label={`${color}_pad`} id={`${color}_pad`} className={`pad_button ${color}`}></button>
 }
 
-function PowerToggleSwitch({power, setPower}) {
+function PowerToggleSwitch({power, setPower, setLevel}) {
 
     function handle_pressing_toggle_switch(e) {
         console.log
         if (e.currentTarget.id === "on_button" && power === "off") {
-            setPower("on")
+            setPower("on");
         } else if (e.currentTarget.id === "off_button" && power === "on") {
-            setPower("off")
+            setPower("off");
+            setLevel("- -");
         }
     }
 
