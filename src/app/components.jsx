@@ -6,10 +6,11 @@ function ColoredButton({color}) {
 function PowerToggleSwitch({power, setPower}) {
 
     function handle_pressing_toggle_switch(e) {
-        if (e.currentTarget.id === "on_button" && power === "OFF") {
-            setPower("ON")
-        } else if (e.currentTarget.id === "off_button" && power === "ON") {
-            setPower("OFF")
+        console.log
+        if (e.currentTarget.id === "on_button" && power === "off") {
+            setPower("on")
+        } else if (e.currentTarget.id === "off_button" && power === "on") {
+            setPower("off")
         }
     }
 
@@ -32,14 +33,22 @@ function PowerToggleSwitch({power, setPower}) {
 
 function GameDisplay({power, level}) {
     return <>
-        <p className="display_box" id="game_display">
-            <span className="display_info">{power === "ON" ? level : null}</span>
-        </p>
+        <div class="count_wrapper">
+            <p className="display_box" id="game_display">
+                <span className="display_info">{power === "on" ? level : null}</span>
+            </p>
+            <p className="button_label">Count</p>
+        </div>
     </>
 }
 
 function NewGameButton({start_game}) {
-    return <button aria-label="start_new_game" className="new_game" id="new_game_button" onClick={start_game}></button>
+    return <>
+        <div className="start_wrapper">
+            <button aria-label="start_new_game" className="new_game" id="new_game_button" onClick={start_game}></button>
+            <p className="button_label">Start</p>
+        </div>
+    </>
 }
 
 export {ColoredButton, PowerToggleSwitch, GameDisplay, NewGameButton};

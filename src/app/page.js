@@ -5,7 +5,7 @@ import {ColoredButton, GameDisplay, PowerToggleSwitch, NewGameButton} from "@/ap
 
 export default function Simon() {
     const [activeColor, setActiveColor] = useState(null);
-    const [power, setPower] = useState("OFF");
+    const [power, setPower] = useState("off");
     const [level, setLevel] = useState("- -");
 
 
@@ -22,20 +22,26 @@ export default function Simon() {
         }, 600);
     }
 
-    const coloredPads = ['red', 'yellow', 'green', 'blue'].map(
+    const coloredPads = ['green', 'red', 'yellow', 'blue'].map(
         (color) => {
-            return <ColoredButton key={color} color={activeColor === color ? `active_${color}` : {color}} />
+            return <ColoredButton key={color} color={activeColor === color ? `active_${color}` : color} />
         }
     );
-    return <main className="game_interface">
-        <div className="colored_pads">
-            {coloredPads}
+    return <>
+        <div className="interface_wrapper">
+            <main className="game_interface">
+                <div className="colored_pads">
+                    {coloredPads}
+                </div>
+                <section className="game_controls">
+                    <h1>Simon</h1>
+                    <div className="game_control_wrapper">
+                        <GameDisplay power={power} level={level} />
+                        <NewGameButton start_game={handle_new_game_button_press}/>
+                    </div>
+                    <PowerToggleSwitch power={power} setPower={setPower}/>
+                </section>
+            </main>
         </div>
-        <section className="game_controls">
-            <h1>Simon</h1>
-            <GameDisplay power={power} level={level} />
-            <NewGameButton start_game={handle_new_game_button_press}/>
-            <PowerToggleSwitch power={power} setPower={setPower}/>
-        </section>
-    </main>
+    </>
 }
