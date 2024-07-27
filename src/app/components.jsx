@@ -34,9 +34,9 @@ function PowerToggleSwitch({power, setPower, setLevel}) {
 
 function GameDisplay({power, level}) {
     return <>
-        <div class="count_wrapper">
+        <div className="count_wrapper">
             <p className="display_box" id="game_display">
-                <span className="display_info">{power === "on" ? level : null}</span>
+                <span className="display_info">{power === "on" ? !isNaN(parseInt(level)) ? parseInt(level) + 1 : level: null}</span>
             </p>
             <p className="button_label">Count</p>
         </div>

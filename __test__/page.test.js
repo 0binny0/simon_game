@@ -1,4 +1,4 @@
-import {jest, test, beforeEach} from "@jest/globals";
+import {jest, test, beforeEach, spyOn} from "@jest/globals";
 import userEvent from "@testing-library/user-event";
 import {findByText, render, screen} from "@testing-library/react";
 import {act} from 'react';
@@ -36,6 +36,25 @@ test(
             expect(display_screen_content).toBeVisible();
     }
 );
+
+// test(
+//     `Verify that colors of a given sequence are automatically
+//     shown to a user to match`, async () => {
+//         const user = userEvent.setup({delay: null});
+//         let mock_math_floor = jest.spyOn(Math, "floor");
+//         mock_math_floor.mockReturnValue(0);
+//         render(<Simon />)
+//         const power_on_button = screen.getByRole("button", {name: "power_on_button"});
+//         await user.click(power_on_button);
+//         const new_game_button = screen.getByRole("button", {name: "start_new_game"});
+//         await user.click(new_game_button);
+//         await act(() => {
+//             jest.advanceTimersByTime(3150);
+//         });
+//         const selected_pad = await screen.findByRole("button", {name: "red_pad"});
+//         expect(selected_pad).toHaveClass("active_red");
+//     }
+// );
 
 afterEach(() => {
   jest.useRealTimers();

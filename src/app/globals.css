@@ -448,26 +448,38 @@ body {
 
 .blue {
   background: blue;
+  opacity: 0.8;
 }
 
 .red {
   background: red;
+  opacity: 0.8;
 }
 
 .yellow {
   background: yellow;
+  opacity: 0.8;
 }
 
 .green {
   background: green;
+  opacity: 0.8;
 }
 
-.green:active {
-  background: lightgreen;
+.active_red {
+  background: red;
 }
 
-.blue:active {
-  background: skyblue;
+.active_blue {
+  background: blue;
+}
+
+.active_yellow {
+  background: yellow;
+}
+
+.active_green {
+  background: green;
 }
 
 .game_controls {
@@ -527,4 +539,8 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
+}
+
+.new_game:active {
+  box-shadow: inset 0px 0px 5px firebrick;
 }

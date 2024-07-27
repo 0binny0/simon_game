@@ -34,7 +34,7 @@ test.each(['off', 'on'])(
 
 test("Verify that <GameDisplay /> displays a neutral sign to indicate the machine is on", () => {
     const user = userEvent.setup();
-    render(<GameDisplay power="ON" level="- -" />);
+    render(<GameDisplay power="on" level="- -" />);
     const game_display_screen = screen.getByText("- -");
     expect(game_display_screen).toBeVisible();
 });
