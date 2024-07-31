@@ -56,6 +56,22 @@ test(
 //     }
 // );
 
+test(
+    `Verify that a user sees a warning symbol when the wrong
+    pad is chosen within a given color sequence`, async () => {
+        const mock_math_floor = jest.spyOn(Math, "floor").mockReturnValue(2);
+        const user = userEvent.setup({advanceTimers: jest.runAllTimers});
+        render(<Simon />);
+        screen.debug();
+        const turn_game_on_button = screen.getByRole("button", {name: "power_on_button"});
+        const start_new_game_button = screen.getByRole("button", {name: "start_new_game"});
+        await act(async () => {
+            await turn_game_on_button.click();
+            await start_new_game_button.click();
+        })
+    }
+);
+
 afterEach(() => {
   jest.useRealTimers();
 });
