@@ -68,7 +68,7 @@ export default function Simon() {
                         setActiveColor(round[color_button_increment_ref.current]);
                         color_button_increment_ref.current++;
                     }
-                }, 650);val
+                }, 650);
             }
             return () => clearInterval(demo_color_pattern.current);
         }
