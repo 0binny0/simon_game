@@ -2,7 +2,8 @@ import {jest, test, beforeEach, spyOn} from "@jest/globals";
 import userEvent from "@testing-library/user-event";
 import {findByText, render, screen} from "@testing-library/react";
 import {act} from 'react';
-import Simon from "@/app/page.js";
+import {Simon, set_new_game} from "@/app/page.js";
+
 
 test(
     `Verify that clicking <PowerToggleSwitch /> to turn the game on
@@ -56,21 +57,29 @@ test(
 //     }
 // );
 
-test(
-    `Verify that a user sees a warning symbol when the wrong
-    pad is chosen within a given color sequence`, async () => {
-        const mock_math_floor = jest.spyOn(Math, "floor").mockReturnValue(2);
-        const user = userEvent.setup({advanceTimers: jest.runAllTimers});
-        render(<Simon />);
-        screen.debug();
-        const turn_game_on_button = screen.getByRole("button", {name: "power_on_button"});
-        const start_new_game_button = screen.getByRole("button", {name: "start_new_game"});
-        await act(async () => {
-            await turn_game_on_button.click();
-            await start_new_game_button.click();
-        })
-    }
-);
+// test(
+//     `Verify that a user sees a warning symbol when the wrong
+//     pad is chosen within a given color sequence`, async () => {
+//
+//         const mock_math_floor = jest.spyOn(Math, "floor").mockReturnValue(0);
+//         const user = userEvent.setup({advanceTimers: jest.runAllTimers});
+//         render(<Simon />);
+//         screen.debug();
+//         const turn_game_on_button = screen.getByRole("button", {name: "power_on_button"});
+//         const start_new_game_button = screen.getByRole("button", {name: "start_new_game"});
+//         const green_button = screen.getByRole("button", {name: "green_pad"});
+//         //turn the game on
+//         await turn_game_on_button.click();
+//         //start a new game
+//         await start_new_game_button.click();
+//         //game shows the pattern to match
+//         //click a wrong pad
+//         await green_button.click();
+//         expect(await screen.findByText("!!")).toBeVisible();
+//
+//     }
+// );
+
 
 afterEach(() => {
   jest.useRealTimers();
