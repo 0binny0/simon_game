@@ -1,9 +1,6 @@
 
-function ColoredButton({color, timer_ref}) {
-    return <button aria-label={`${color}_pad`} id={`${color}_pad`} className={`pad_button ${color}`} onClick={() => {
-        timer_ref.current = true;
-        console.log("Cancel the timer...");
-    }}></button>
+function ColoredButton({color, timer_ref, guess}) {
+    return <button aria-label={`${color}_pad`} id={`${color}_pad`} className={`pad_button ${color}`} onClick={guess}></button>
 }
 
 function PowerToggleSwitch({power, setPower, setLevel}) {
