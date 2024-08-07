@@ -1,6 +1,6 @@
 
 export const games = [[
-    ["red"], ["red", "red"], ["red", "red", "yellow"], ["red", null, "red", "yellow", "green"],
+    ["red"], ["red", null, "red"], ["red", null, "red", "yellow"], ["red", null, "red", "yellow", "green"],
     ["red", null, "red", "yellow", "green", "red"], ["red", null, "red", "yellow", "green", "red", "blue"],
     ["red", null, "red", "yellow", "green", "red", "blue", "yellow"],
     ["red", null, "red", "yellow", "green", "red", "blue", "yellow", "green"],
@@ -12,7 +12,9 @@ export const games = [[
     ["red", null, "red", "yellow", "green", "red", "blue", "yellow", "green", "blue", null, "blue", "red", "blue", "yellow", "blue"],
     ["red", null, "red", "yellow", "green", "red", "blue", "yellow", "green", "blue", null, "blue", "red", "blue", "yellow", "blue",
     "green"], ["red", null, "red", "yellow", "green", "red", "blue", "yellow", "green", "blue", null, "blue", "red", "blue",
-    "yellow", "blue", "green", "red"]
+    "yellow", "blue", "green", "red"], ["red", null, "red", "yellow", "green", "red", "blue", "yellow", "green", "blue", null, "blue", "red", "blue",
+    "yellow", "blue", "green", "red", null, "red"], ["red", null, "red", "yellow", "green", "red", "blue", "yellow", "green", "blue", null, "blue", "red", "blue",
+    "yellow", "blue", "green", "red", null, "red", "green"]
 ], [
     ["red"], ["red", "blue"], ["red", "blue", "green"], ["red", "blue", "green", "red"], ["red", "blue", "green", "red", "blue"],
     ["red", "blue", "green", "red", "blue", null, "blue"], ["red", "blue", "green", "red", "blue", null, "blue", "green"],
@@ -25,7 +27,9 @@ export const games = [[
     ["red", "blue", "green", "red", "blue", null, "blue", "green", "blue", "red", "green", "yellow", "blue", "green", "yellow"],
     ["red", "blue", "green", "red", "blue", null, "blue", "green", "blue", "red", "green", "yellow", "blue", "green", "yellow",
     "green"], ["red", "blue", "green", "red", "blue", null, "blue", "green", "blue", "red", "green", "yellow", "blue",
-    "green", "yellow", "green", "red"]
+    "green", "yellow", "green", "red"], ["red", "blue", "green", "red", "blue", null, "blue", "green", "blue", "red", "green", "yellow", "blue",
+    "green", "yellow", "green", "red", "green"], ["red", "blue", "green", "red", "blue", null, "blue", "green", "blue", "red", "green", "yellow", "blue",
+    "green", "yellow", "green", "red", "green", "red"]
 ], [
     ["yellow"], ["yellow", "green"], ["yellow", "green", "yellow"], ["yellow", "green", "yellow", "red"],
     ["yellow", "green", "yellow", "red", null, "red"], ["yellow", "green", "yellow", "red", null, "red", "blue"],
@@ -40,11 +44,12 @@ export const games = [[
     ["yellow", "green", "yellow", "red", null, "red", "blue", null, "blue", "yellow", "blue", "green", "green", "red", "yellow", "blue"],
     ["yellow", "green", "yellow", "red", null, "red", "blue", null, "blue", "yellow", "blue", "green", "green", "red", "yellow",
     "blue", "blue"], ["yellow", "green", "yellow", "red", "red", "blue", null, "blue", "yellow", "blue", "green", "green",
-    "red", "yellow", "blue", "blue", "green"]
+    "red", "yellow", "blue", "blue", "green"], ["yellow", "green", "yellow", "red", "red", "blue", null, "blue", "yellow", "blue", "green", "green",
+    "red", "yellow", "blue", "blue", "green", null, "green", "yellow"]
 
 ], [
     ["green"], ["green", "blue"], ["green", "blue", "green"], ["green", "blue", "green", "yellow"],
-    ["green", "blue", "green", "yellow", null, "yellow"], ["green", "blue", "green", "yellow", "yellow", "red"],
+    ["green", "blue", "green", "yellow", null, "yellow"], ["green", "blue", "green", "yellow", null, "yellow", "red"],
     ["green", "blue", "green", "yellow", null, "yellow", "red", "blue"],
     ["green", "blue", "green", "yellow", null, "yellow", "red", "blue", "yellow"],
     ["green", "blue", "green", "yellow", null, "yellow", "red", "blue", "yellow", null, "yellow"],
@@ -54,7 +59,9 @@ export const games = [[
     ["green", "blue", "green", "yellow", null, "yellow", "red", "blue", "yellow", null, "yellow", "green", "blue", null, "blue", "red"],
     ["green", "blue", "green", "yellow", null, "yellow", "red", "blue", "yellow", null, "yellow", "green", "blue", null, "blue",
     "red", "green"], ["green", "blue", "green", "yellow", "yellow", "red", "blue", "yellow", null, "yellow", "green", "blue",
-    null, "blue", "red", "green", "yellow"]
+    null, "blue", "red", "green", "yellow"], ["green", "blue", "green", "yellow", "yellow", "red", "blue", "yellow", null, "yellow", "green", "blue",
+    null, "blue", "red", "green", "yellow", "blue"], ["green", "blue", "green", "yellow", "yellow", "red", "blue", "yellow", null, "yellow", "green", "blue",
+    null, "blue", "red", "green", "yellow", "blue", "green"]
 ], [
     ["blue"], ["blue", "green"], ["blue", "green", "red"], ["blue", "green", "red", null, "red"],
     ["blue", "green", "red", null, "red", "yellow"], ["blue", "green", "red", "red", "yellow", "red"],
@@ -67,5 +74,19 @@ export const games = [[
     ["blue", "green", "red", null, "red", "yellow", "red", "blue", null, "blue", "yellow", "green", "red", "yellow", "blue", "red"],
     ["blue", "green", "red", null, "red", "yellow", "red", "blue", null, "blue", "yellow", "green", "red", "yellow", "blue", "red", "red"],
     ["blue", "green", "red", null, "red", "yellow", "red", "blue", null, "blue", "yellow", "green", "red", "yellow", "blue", "red",
-    "red", "green"]
+    "red", "green"], ["blue", "green", "red", null, "red", "yellow", "red", "blue", null, "blue", "yellow", "green", "red", "yellow", "blue", "red",
+    "red", "green", "yellow"], ["blue", "green", "red", null, "red", "yellow", "red", "blue", null, "blue", "yellow", "green", "red", "yellow", "blue", "red",
+    "red", "green", "yellow", "blue"]
+],[
+    ["yellow"], ["yellow", null, "yellow"], ["yellow", null, "yellow", "blue"], ["yellow", null, "yellow", "blue", "red"],
+    ["yellow", null, "yellow", "blue", "red", "green"], ["yellow", null, "yellow", "blue", "red", "green", "yellow"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow"], ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue", "red"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue", "red", "blue"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue", "red", "blue", null, "blue"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue", "red", "blue", null, "blue", "green"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue", "red", "blue", null, "blue", "green", "null", "green"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue", "red", "blue", null, "blue", "green", "null", "green", "blue"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue", "red", "blue", null, "blue", "green", "null", "green", "blue", "red"],
+    ["yellow", null, "yellow", "blue", "red", "green", "yellow", null, "yellow", "blue", "red", "blue", null, "blue", "green", "null", "green", "blue", "red", "yellow"]
 ]];
